@@ -91,6 +91,24 @@ async def debug_lead(leadgen_id: str) -> dict:
     }
 
 
+@app.get("/test-capi")
+async def test_capi() -> dict:
+    """Dispara um LeadQualificado de teste para registrar o evento no pixel do Facebook."""
+    fake_fields = {
+        "email": "teste@metrika.com",
+        "phone_number": "11999999999",
+        "full_name": "Lead Teste",
+    }
+    result = await send_capi_event(
+        pixel_id=PIXEL_ID,
+        access_token=CAPI_ACCESS_TOKEN,
+        lead_fields=fake_fields,
+        score=8,
+        lead_id="test_lead_000",
+    )
+    return {"status": "evento disparado", "resposta_facebook": result}
+
+
 @app.get("/health")
 async def health() -> dict:
     return {"status": "ok"}
