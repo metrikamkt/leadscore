@@ -66,6 +66,7 @@ async def send_capi_event(
                 "event_name": "LeadQualificado",
                 "event_time": int(time.time()),
                 "action_source": "website",
+                "event_source_url": "https://web-production-f9d5a.up.railway.app",
                 "user_data": user_data,
                 "custom_data": {
                     "lead_score": score,
