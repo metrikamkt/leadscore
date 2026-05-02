@@ -65,7 +65,7 @@ async def send_capi_event(
             {
                 "event_name": "LeadQualificado",
                 "event_time": int(time.time()),
-                "action_source": "system_generated",
+                "action_source": "website",
                 "user_data": user_data,
                 "custom_data": {
                     "lead_score": score,
