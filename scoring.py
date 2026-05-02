@@ -2,18 +2,10 @@
 # IMPORTANTE: O Facebook gera nomes de campo baseados no texto da pergunta.
 # Use o endpoint GET /debug-lead/{leadgen_id} para ver os nomes exatos do seu formulário.
 FIELD_MAP = {
-    # Variações comuns — ajuste conforme o retorno do /debug-lead
-    "qual_e_o_faturamento_medio_mensal_da_sua_empresa": "faturamento",
-    "faturamento_medio_mensal_da_sua_empresa": "faturamento",
-    "faturamento_medio_mensal": "faturamento",
-    "sua_empresa_ja_vende_todos_os_dias": "vende",
-    "empresa_ja_vende_todos_os_dias": "vende",
-    "voce_ja_investe_em_marketing_ou_trafego_pago": "marketing",
-    "ja_investe_em_marketing_ou_trafego_pago": "marketing",
-    "investe_em_marketing_ou_trafego_pago": "marketing",
-    "qual_e_o_seu_principal_objetivo_agora": "objetivo",
-    "principal_objetivo_agora": "objetivo",
-    "seu_principal_objetivo_agora": "objetivo",
+    "qual_é_o_faturamento_médio_mensal_da_sua_empresa?": "faturamento",
+    "sua_empresa_já_vende_todos_os_dias?": "vende",
+    "você_já_investe_em_marketing_ou_tráfego_pago?": "marketing",
+    "qual_é_o_seu_principal_objetivo_agora?": "objetivo",
 }
 
 SCORE_TABLE: dict[str, dict[str, int]] = {
